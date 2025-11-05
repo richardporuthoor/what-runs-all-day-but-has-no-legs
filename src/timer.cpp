@@ -2,14 +2,12 @@
 
 #include "timer.hpp"
 
-void Timer::start()
-{
+void Timer::start() {
    start_clock = std::clock();
    running = true;
 }
 
-void Timer::stop()
-{
+void Timer::stop() {
    if (!running)
    {
       return;
@@ -18,10 +16,8 @@ void Timer::stop()
    running = false;
 }
 
-double Timer::elapsed() const
-{
-   if(start_clock == 0 && stop_clock == 00 && !running)
-   {
+double Timer::elapsed() const {
+   if (start_clock == 0 && stop_clock == 00 && !running) {
       return 0.0;
    }
    long total_time = running ? std::clock() : stop_clock;

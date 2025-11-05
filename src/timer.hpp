@@ -2,8 +2,7 @@
 
 #include <ctime>
 
-class Timer
-{
+class Timer {
 private:
     long start_clock = 0;
     long stop_clock = 0;
