@@ -1,25 +1,18 @@
 #include <iostream>
-
 #include "src/timer.hpp"
 
-//compare system to to the timer class
-
 int main() {
-  Timer timer;
+    Timer a;
+    Timer b;
 
-  std::cout << "starting timer!" << std::endl;
-  timer.start();
-  
-  double dummy = 0;
+    a.set_elapsed_seconds(62);    // 1 min 2 sec
+    b.set_elapsed_seconds(125);   // 2 min 5 sec
 
-  for (int i = 0; i < 100000000; ++i)
-  {
-    dummy += i * 0.000001;
-  }
+    Timer sum = a.add(b);         // 187 sec
+    Timer diff = a.subtract(b);   // 0 sec (because negative becomes 0)
 
-  timer.stop();
+    sum.pretty_print();
+    diff.pretty_print();
 
-  std::cout << "elapsed time:" << timer.elapsed() << " seconds\n";
-
-  return 0;
+    return 0;
 }

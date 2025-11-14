@@ -22,5 +22,6 @@
         "typeinfo": "cpp",
         "variant": "cpp",
         "algorithm": "cpp"
-    }
+    },
+    "C_Cpp.errorSquiggles": "disabled"
 }
